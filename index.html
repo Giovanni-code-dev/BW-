@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Music Player</title>
+    <link rel="stylesheet" href="player.css">
 </head>
 <body>
-    <h1>ciao team</h1>
+    <header class="top-bar">
+        <button class="nav-btn">&#10094;</button>
+        <button class="nav-btn">&#10095;</button>
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile" class="profile-pic">
+            <span class="username">Lidia Nautilus</span>
+        </div>
+    </header>
+
+    <input type="text" id="search-input" placeholder="Cerca una canzone..." />
+<button id="search-button">Cerca</button>
+
+<div class="player">
+    <img class="cover-img" src="" alt="Cover" width="100" />
+    <div>
+        <h3 class="track-title">Titolo</h3>
+        <p class="artist-name">Artista</p>
+    </div>
+    <button class="prev">⏮</button>
+    <button class="play">⏵</button>
+    <button class="next">⏭</button>
+    <input type="range" class="seek-bar" value="0" max="100" />
+    <span class="current-time">0:00</span> / <span class="total-time">0:30</span>
+    <button class="mute">🔊</button>
+    <input type="range" class="volume-bar" value="100" max="100" />
+</div>
+    <script src="player.js"></script>
 </body>
 </html>
+
