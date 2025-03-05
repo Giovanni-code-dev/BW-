@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <link rel="stylesheet" href="player.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header class="top-bar">
-        <button class="nav-btn">&#10094;</button>
-        <button class="nav-btn">&#10095;</button>
+        <button class="nav-btn prev-page"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="nav-btn next-page"><i class="fa-solid fa-arrow-right"></i></button>
+
+
         <div class="profile">
             <img src="profile.jpg" alt="Profile" class="profile-pic">
             <span class="username">Lidia Nautilus</span>
@@ -17,23 +20,33 @@
     </header>
 
     <input type="text" id="search-input" placeholder="Cerca una canzone..." />
-<button id="search-button">Cerca</button>
+    <button id="search-button">Cerca</button>
 
-<div class="player">
-    <img class="cover-img" src="" alt="Cover" width="100" />
-    <div>
-        <h3 class="track-title">Titolo</h3>
-        <p class="artist-name">Artista</p>
+    <div class="player">
+        <img class="cover-img" src="" alt="Cover" width="100" />
+        <div>
+            <h3 class="track-title">Titolo</h3>
+            <p class="artist-name">Artista</p>
+        </div>
+        <button class="shuffle"><i class="fa-solid fa-shuffle"></i></button>
+        <button class="prev"><i class="fa-solid fa-backward-step"></i></button>
+        <button class="play"><i class="fa-solid fa-circle-play"></i></button>
+        <button class="next"><i class="fa-solid fa-forward-step"></i></button>
+        <button class="repeat"><i class="fa-solid fa-repeat"></i></button>
+        <input type="range" class="seek-bar" value="0" max="100" />
+        <span class="current-time">0:00</span> / <span class="total-time">0:30</span>
+        <button class="microphone"><i class="fa-solid fa-microphone-lines"></i></button>
+        <button class="queue-to-show-songs"><i class="fa-solid fa-grip-lines"></i></button>
+        <button class="connect-on-a-device"><i class="fa-solid fa-computer"></i></button>
+        <button class="mute"><i class="fa-solid fa-volume-high"></i></button>
+        <input type="range" class="volume-bar" value="100" max="100" />
+        <button class="full-screen"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+
     </div>
-    <button class="prev">⏮</button>
-    <button class="play">⏵</button>
-    <button class="next">⏭</button>
-    <input type="range" class="seek-bar" value="0" max="100" />
-    <span class="current-time">0:00</span> / <span class="total-time">0:30</span>
-    <button class="mute">🔊</button>
-    <input type="range" class="volume-bar" value="100" max="100" />
-</div>
+    
     <script src="player.js"></script>
 </body>
 </html>
+
+
 
