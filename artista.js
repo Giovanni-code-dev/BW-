@@ -1,5 +1,5 @@
 const endPoint = "https://striveschool-api.herokuapp.com/api/deezer";
-const artistId = "5768"; // ID artista da sostituire dinamicamente
+const artistId = "290"; // ID artista da sostituire dinamicamente
 
 // Funzione per ottenere dati artista
 async function getArtist(id) {
@@ -30,10 +30,13 @@ async function getTopTracks(id) {
             const listItem = document.createElement("li");
             listItem.className = "list-group-item d-flex justify-content-between align-items-center";
             listItem.innerHTML = `
-                <img src="${track.album.cover_small}" alt="cover" class="me-3">
-                <span>${track.title}</span>
-                <span>${(track.duration / 60).toFixed(2).replace('.', ':')}</span>
-            `;
+    <img src="${track.album.cover_small}" alt="cover">
+    <div class="track-info text-white">
+        <span class="track-title text-white">${track.title}</span>
+        <span class="track-duration text-white">${(track.duration / 60).toFixed(2).replace('.', ':')}</span>
+    </div>
+`;
+
             trackList.appendChild(listItem);
         });
     } catch (error) {
@@ -41,7 +44,43 @@ async function getTopTracks(id) {
     }
 }
 
+
+// Array finto di ID brani che l'utente ha messo "Mi piace"
+const likedTrackIds = [3135556, 3135558, 3135560]; // Esempio di ID
+
+// Funzione per ottenere e mostrare i brani piaciuti
+async function getLikedTracks() {
+    try {
+        const likedList = document.getElementById("liked-tracks");
+        likedList.innerHTML = "";
+
+        for (const trackId of likedTrackIds) {
+            const response = await fetch(`${endPoint}/track/${trackId}`);
+            const track = await response.json();
+
+            const listItem = document.createElement("li");
+            listItem.className = "list-group-item ";
+
+            listItem.innerHTML = `
+                <img src="${track.album.cover_small}" alt="cover">
+                <div class="track-info text-white">
+                    <span class="track-title text-white">${track.title}</span>
+                    <span class="track-duration text-white">${(track.duration / 60).toFixed(2).replace('.', ':')}</span>
+                </div>
+            `;
+
+            likedList.appendChild(listItem);
+        }
+    } catch (error) {
+        console.error("Errore nel recupero dei brani che ti piacciono:", error);
+    }
+}
+
+
+
+
 getArtist(artistId);
+getLikedTracks();
 
 
 
@@ -81,22 +120,3 @@ getArtist(artistId);
 
 
 
-// const = "https://striveschool-api.herokuapp.com/api/deezer/search?q={query}"
-// const artistEndpoint ="https://striveschool-api.herokuapp.com/api/deezer/artist/{id}"
-
-// //area elementi dom
-
-
-// //funzione fetch ricerca
-// function getArtist(id){
-//     fetch(EndPoint)
-//     .then(response => response.json())
-//     .then(data => 
-//         console.log(data)
-//         )
-//     .catch(error => console.log(error))
-// }
-
-
-
-// getArtist()
