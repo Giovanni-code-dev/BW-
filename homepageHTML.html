@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotify Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-white">
+
+
+            <!-- Attività Amici (Colonna Destra) -->
+            <aside class="col-md-2 bg-black p-3 vh-100" id="friend-list">
+                <div class="friends-header">
+                    <h6>Attività Amici</h6>
+                    <div> 
+                        <i class="fas fa-user-plus" onclick="addFriend()" title="Aggiungi Amico"></i>
+
+                        <i class="fas fa-times fa-xs" onclick="toggleFriends()" title="Chiudi"></i>
+                    </div>
+                </div>
+                <ul class="friend-list">
+                    <!-- LISTA amici -->
+                </ul>
+                
+            </aside>
+        </div>
+    </div>
+
+    <script src="homepageJs.js"></script>
+</body>
+</html>

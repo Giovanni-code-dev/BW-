@@ -1,0 +1,74 @@
+.friend-list {
+    list-style: none;
+    padding: 0;
+}
+.friend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #121212;
+    border-radius: 8px;
+}
+.friend-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.friend-info {
+    flex-grow: 1;
+}
+.friend-info h6 {
+    margin: 0;
+    font-size: 14px;
+}
+.friend-info p {
+    margin: 0;
+    font-size: 12px;
+    color: gray;
+}
+.time-ago {
+    font-size: 12px;
+    color: gray;
+}
+.friends-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.friends-header i {
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: white;
+}
+.friends-header i:hover {
+    color: #1DB954;
+}
+
+.friends-header i {
+    font-size: 24px;  /* Dimensione icona */
+    color: white !important; /* Forza il colore bianco */
+    display: inline-block; /* Assicura che l'icona venga visualizzata */
+    width: 30px; /* Previene la dimensione 0x0 */
+    height: 30px;
+    text-align: center;
+}
+.friends-header i.fa-user-plus {
+    color: #1DB954; /* Cambia colore icona */
+}
+
+
+.friends-header i:hover {
+    color: #1DB954; /* Cambia colore quando passi sopra con il mouse */
+}
+
+.friends-header i {
+    font-size: 14px !important;  /* Riduci la dimensione dell'icona */
+    width: 14px;  /* Evita ingrandimenti automatici */
+    height: 14px;
+}
+
+
+git config --global user.name "AleScar1"
