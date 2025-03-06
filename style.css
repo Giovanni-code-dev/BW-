@@ -48,24 +48,24 @@
 }
 
 .friends-header i {
-    font-size: 24px;  /* Dimensione icona */
-    color: white !important; /* Forza il colore bianco */
-    display: inline-block; /* Assicura che l'icona venga visualizzata */
-    width: 30px; /* Previene la dimensione 0x0 */
+    font-size: 24px;
+    color: white !important; 
+    display: inline-block; 
+    width: 30px;
     height: 30px;
     text-align: center;
 }
 .friends-header i.fa-user-plus {
-    color: #1DB954; /* Cambia colore icona */
+    color: #1DB954;
 }
 
 
 .friends-header i:hover {
-    color: #1DB954; /* Cambia colore quando passi sopra con il mouse */
+    color: #1DB954;
 }
 
 .friends-header i {
-    font-size: 14px !important;  /* Riduci la dimensione dell'icona */
-    width: 14px;  /* Evita ingrandimenti automatici */
+    font-size: 14px !important;
+    width: 14px; 
     height: 14px;
 }
