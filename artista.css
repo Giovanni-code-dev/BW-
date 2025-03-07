@@ -1,0 +1,74 @@
+.card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+.card-text small img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+.list-group {
+    --bs-list-group-bg: currentColor !important;
+    --bs-list-group-border-color:currentColor !important
+   
+}
+
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.list-group-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.track-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.track-title {
+    flex-grow: 1; /* Occupa lo spazio disponibile */
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+.track-duration {
+    text-align: right;
+    width: 50px; /* Mantiene la durata allineata a destra */
+}
+
+
+
+.row>* {
+background-color: currentColor;
+}
+
+.list-group-numbered > li::before {
+    color: white !important;
+}
+ .icona{
+    width: 25px; 
+    height: 25px;
+ }
+
+ .border-span {
+    border: 1px solid white;  
+    border-radius: 5px;
+    margin-top: 10px; 
+    display: inline-block;
+    font-size: small;
+}
