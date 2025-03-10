@@ -1,0 +1,11 @@
+
+
+button.play {
+    border: none;
+    border-radius: 50%;
+    appearance: none;
+    background-color: transparent;
+    color: white;
+    padding: 0;
+    font-size: 1.2rem;
+}
